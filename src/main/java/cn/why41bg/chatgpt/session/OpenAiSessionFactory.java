@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @Classname OpenAiSessionFactory
- * @Description TODO 类描述
+ * @Description OpenAiSession 会话工厂
  * @Author 魏弘宇
  * @Date 2024/3/11 17:57
  */

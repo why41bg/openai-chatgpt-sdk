@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * @Classname Configuration
- * @Description TODO 类描述
+ * @Description API 相关配置
  * @Author 魏弘宇
  * @Date 2024/3/11 17:47
  */
