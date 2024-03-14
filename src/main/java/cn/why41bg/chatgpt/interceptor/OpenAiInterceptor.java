@@ -22,12 +22,8 @@ public class OpenAiInterceptor implements Interceptor {
 
     private String apiKey;
 
-    private String authToken;
-
     private Request auth(String apiKey, Request original) {
-        // TODO 在 URL 中添加 token 参数
         HttpUrl url = original.url().newBuilder()
-//                .addQueryParameter("token", authToken)
                 .build();
 
         // 设置 Authorization 和 Content-Type 头部信息并创建请求
@@ -37,7 +33,6 @@ public class OpenAiInterceptor implements Interceptor {
                 .header(Header.CONTENT_TYPE.getValue(), ContentType.JSON.getValue())
                 .method(original.method(), original.body())
                 .build();
-
     }
 
     @NotNull

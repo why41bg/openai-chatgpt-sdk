@@ -53,7 +53,6 @@ public class OpenAiSession implements IOpenAiSession {
 
     @Override
     public EventSource chatCompletions(ChatCompletionRequest chatCompletionRequest, EventSourceListener eventSourceListener) throws JsonProcessingException {
-        // 构建请求信息
         Request request = new Request.Builder()
                 .url(configuration.getApiHost().concat(IOpenAiApi.V1_CHAT_COMPLETIONS))
                 .post(RequestBody.create(MediaType.parse(ContentType.JSON.getValue()), new ObjectMapper().writeValueAsString(chatCompletionRequest)))
